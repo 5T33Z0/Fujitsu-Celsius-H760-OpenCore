@@ -19,6 +19,14 @@ Component | Description
 Storage  | Samsung CM871a SSD (512 GB)
 RAM | 16 GB DDR4 SK Hynix (2133 Mhz)    
 
+## What's working
+
+- [x] iGPU (including Brightness Control)
+- [x] Audio (including Volume Controls)
+- [x] LAN
+- [x] WiFi/BT
+- [x] Touchpad (ELAN)
+
 *to be continued…*
 
 ## 📜 License
