@@ -15,10 +15,12 @@ Component | Description
 **BIOS**      | 1.35 (2023-01-23)
 **CPU**       | [Intel Core i7-6820HQ](https://www.intel.com/content/www/us/en/products/sku/88970/intel-core-i76820hq-processor-8m-cache-up-to-3-60-ghz/specifications.html) (Skylake)
 **Graphics**: <ul><li>iGPU <li> dGPU | <br><ul><li>Intel HD Graphics 530 (spoofed as Kabylake) <li> NVIDIA Quadro M2000M (not working in macOS)
-**Networking**: <ul><li> WiFi <li>LAN| <br><ul><li>Intel Wireless-AC 8260 (Dual Band) <li>Intel I219-LM (1 Gbps) <li> SIM Card Slot
-Storage  | Samsung CM871a SSD (512 GB)
-RAM | 16 GB DDR4 SK Hynix (2133 Mhz)
+**Networking**: <ul><li> WiFi <li>LAN<li>WAN| <br><ul><li>Intel Wireless-AC 8260 (Dual Band) <li>Intel I219-LM (1 Gbps) <li> SIM Card Slot
+**Storage**  | Samsung CM871a SSD (512 GB)
+**RAM** | 16 GB DDR4 SK Hynix (2133 Mhz)
+**SD Card Reader** | Realtek PCIE CardReader
 …
+
 
 ## What's working
 
@@ -28,6 +30,7 @@ RAM | 16 GB DDR4 SK Hynix (2133 Mhz)
 - [x] WiFi/BT (requires patching with OCLP in Post-Install)
 - [x] Touchpad (ELAN)
 - [x] Battery Status Indicator
+- [X] SD Card Reader
 
 ### Todo
 - [ ] Modifying Framebufffer Patch for attaching external Displays
