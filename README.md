@@ -18,6 +18,7 @@ Component | Description
 **Networking**: <ul><li> WiFi <li>LAN| <br><ul><li>Intel Wireless-AC 8260 (Dual Band) <li>Intel I219-LM (1 Gbps) <li> SIM Card Slot
 Storage  | Samsung CM871a SSD (512 GB)
 RAM | 16 GB DDR4 SK Hynix (2133 Mhz)
+…
 
 ## What's working
 
@@ -33,7 +34,8 @@ RAM | 16 GB DDR4 SK Hynix (2133 Mhz)
 - [ ] Keyboard Shortcuts Mappings
 - [ ] Waking Screen without additional Keyboard inputs
 - [ ] USB Port Mapping
-- [ ] 
+
+…
 
 *to be continued…*
 
