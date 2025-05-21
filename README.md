@@ -15,17 +15,25 @@ Component | Description
 **BIOS**      | 1.35 (2023-01-23)
 **CPU**       | [Intel Core i7-6820HQ](https://www.intel.com/content/www/us/en/products/sku/88970/intel-core-i76820hq-processor-8m-cache-up-to-3-60-ghz/specifications.html) (Skylake)
 **Graphics**: <ul><li>iGPU <li> dGPU | <br><ul><li>Intel HD Graphics 530 (spoofed as Kabylake) <li> NVIDIA Quadro M2000M (not working in macOS)
-**Networking**: <ul><li> WiFi <li>LAN| <br><ul><li>Intel(R) Dual Band Wireless-AC 8260 <li>Intel(R) Ethernet Connection I219-LM
+**Networking**: <ul><li> WiFi <li>LAN| <br><ul><li>Intel Wireless-AC 8260 (Dual Band) <li>Intel I219-LM (1 Gbps) <li> SIM Card Slot
 Storage  | Samsung CM871a SSD (512 GB)
-RAM | 16 GB DDR4 SK Hynix (2133 Mhz)    
+RAM | 16 GB DDR4 SK Hynix (2133 Mhz)
 
 ## What's working
 
-- [x] iGPU (including Brightness Control)
+- [x] iGPU (incuding. Brightness Controls)
 - [x] Audio (including Volume Controls)
 - [x] LAN
-- [x] WiFi/BT
+- [x] WiFi/BT (requires patching with OCLP in Post-Install)
 - [x] Touchpad (ELAN)
+- [x] Battery Status Indicator
+
+### Todo
+- [ ] Modifying Framebufffer Patch for attaching external Displays
+- [ ] Keyboard Shortcuts Mappings
+- [ ] Waking Screen without additional Keyboard inputs
+- [ ] USB Port Mapping
+- [ ] 
 
 *to be continued…*
 
