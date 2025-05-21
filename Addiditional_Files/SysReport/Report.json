@@ -1,0 +1,401 @@
+{
+    "Motherboard": {
+        "Name": "FUJITSU CELSIUS H760",
+        "Chipset": "QM170",
+        "Platform": "Laptop"
+    },
+    "BIOS": {
+        "Version": "Version 1.35",
+        "Release Date": "2023-01-23",
+        "System Type": "x64-based",
+        "Firmware Type": "UEFI",
+        "Secure Boot": "Disabled"
+    },
+    "CPU": {
+        "Manufacturer": "Intel",
+        "Processor Name": "Intel(R) Core(TM) i7-6820HQ",
+        "Codename": "Skylake",
+        "Core Count": "04",
+        "CPU Count": "01",
+        "SIMD Features": "SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, AVX, AVX2"
+    },
+    "GPU": {
+        "NVIDIA Quadro M2000M": {
+            "Manufacturer": "NVIDIA",
+            "Codename": "Maxwell",
+            "Device ID": "10DE-13B0",
+            "Device Type": "Discrete GPU",
+            "Subsystem ID": "194B10CF",
+            "PCI Path": "PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)",
+            "ACPI Path": "\\_SB.PCI0.PEG0.PEGP",
+            "Resizable BAR": "Disabled"
+        },
+        "Intel(R) HD Graphics 530": {
+            "Manufacturer": "Intel",
+            "Codename": "Skylake",
+            "Device ID": "8086-191B",
+            "Device Type": "Integrated GPU",
+            "Subsystem ID": "193910CF",
+            "PCI Path": "PciRoot(0x0)/Pci(0x2,0x0)",
+            "ACPI Path": "\\_SB.PCI0.GFX0",
+            "Resizable BAR": "Disabled"
+        }
+    },
+    "Monitor": {
+        "B24W-7 LED": {
+            "Connector Type": "HDMI",
+            "Resolution": "1920x1200",
+            "Connected GPU": "Intel(R) HD Graphics 530"
+        },
+        "LGD046F": {
+            "Connector Type": "Internal",
+            "Resolution": "1920x1080",
+            "Connected GPU": "Intel(R) HD Graphics 530"
+        }
+    },
+    "Network": {
+        "Intel(R) Dual Band Wireless-AC 8260": {
+            "Bus Type": "PCI",
+            "Device ID": "8086-24F3",
+            "Subsystem ID": "00108086",
+            "PCI Path": "PciRoot(0x0)/Pci(0x1c,0x1)/Pci(0x0,0x0)",
+            "ACPI Path": "\\_SB.PCI0.RP02.PXSX"
+        },
+        "Intel(R) Ethernet Connection (2) I219-LM": {
+            "Bus Type": "PCI",
+            "Device ID": "8086-15B7",
+            "Subsystem ID": "192C10CF",
+            "PCI Path": "PciRoot(0x0)/Pci(0x1f,0x6)",
+            "ACPI Path": "\\_SB.PCI0.GLAN"
+        },
+        "EM7305": {
+            "Bus Type": "USB",
+            "Device ID": "1199-9041"
+        }
+    },
+    "Sound": {
+        "Realtek High Definition Audio": {
+            "Bus Type": "HDAUDIO",
+            "Device ID": "10EC-0255",
+            "Subsystem ID": "10CF1621",
+            "Audio Endpoints": [
+                "Mikrofonarray",
+                "Lautsprecher"
+            ],
+            "Controller Device ID": "8086-A170"
+        },
+        "Intel(R) Display-Audio": {
+            "Bus Type": "HDAUDIO",
+            "Device ID": "8086-2809",
+            "Subsystem ID": "10CF18DA",
+            "Controller Device ID": "8086-A170"
+        }
+    },
+    "USB Controllers": {
+        "Intel(R) USB 3.0 eXtensible-Hostcontroller \u2013 1.0 (Microsoft)": {
+            "Bus Type": "PCI",
+            "Device ID": "8086-A12F",
+            "Subsystem ID": "193710CF",
+            "PCI Path": "PciRoot(0x0)/Pci(0x14,0x0)",
+            "ACPI Path": "\\_SB.PCI0.XHC_"
+        }
+    },
+    "Input": {
+        "Unifying Receiver": {
+            "Bus Type": "USB",
+            "Device ID": "046D-C52B"
+        },
+        "PS/2-Standardtastatur": {
+            "Bus Type": "ACPI",
+            "Device": "FUJ0300",
+            "Device Type": "PS/2"
+        },
+        "ELAN Input Device": {
+            "Bus Type": "ACPI",
+            "Device": "ETD0D04",
+            "Device Type": "PS/2"
+        }
+    },
+    "Storage Controllers": {
+        "HM170/QM170 Chipset SATA Controller [AHCI Mode]": {
+            "Bus Type": "PCI",
+            "Device ID": "8086-A103",
+            "Subsystem ID": "193710CF",
+            "PCI Path": "PciRoot(0x0)/Pci(0x17,0x0)",
+            "ACPI Path": "\\_SB.PCI0.SAT0",
+            "Disk Drives": [
+                "SAMSUNG MZ7TN512HDHP-00007"
+            ]
+        }
+    },
+    "Bluetooth": {
+        "Intel(R) Wireless Bluetooth(R)": {
+            "Bus Type": "USB",
+            "Device ID": "8087-0A2B"
+        }
+    },
+    "SD Controller": {
+        "Realtek PCIE CardReader": {
+            "Bus Type": "PCI",
+            "Device ID": "10EC-524A",
+            "Subsystem ID": "194310CF"
+        }
+    },
+    "System Devices": {
+        "Hauptplatinenressourcen": {
+            "Bus Type": "ACPI",
+            "Device": "PNP0C02",
+            "ACPI Path": "\\_SB.PCI0.PDRC"
+        },
+        "Hauptplatinenressourcen_#1": {
+            "Bus Type": "ACPI",
+            "Device": "PNP0C02",
+            "ACPI Path": "\\_SB.PCI0.LPCB.LDRC"
+        },
+        "Hauptplatinenressourcen_#2": {
+            "Bus Type": "ACPI",
+            "Device": "PNP0C02",
+            "ACPI Path": "\\_SB.PCI0.SIRC"
+        },
+        "Intel(R) 100 Series/C230 Series Chipset Family LPC Controller (QM170) - A14D": {
+            "Bus Type": "PCI",
+            "Device ID": "8086-A14D",
+            "Subsystem ID": "193710CF",
+            "PCI Path": "PciRoot(0x0)/Pci(0x1f,0x0)",
+            "ACPI Path": "\\_SB.PCI0.LPCB"
+        },
+        "ACPI-Prozessoraggregator": {
+            "Bus Type": "ACPI",
+            "Device": "ACPI000C",
+            "ACPI Path": "\\_SB.PAGD"
+        },
+        "Intel(R) 100 Series/C230 Series Chipset Family PCI Express Root Port #3 - A112": {
+            "Bus Type": "PCI",
+            "Device ID": "8086-A112",
+            "Subsystem ID": "193710CF",
+            "PCI Path": "PciRoot(0x0)/Pci(0x1c,0x2)",
+            "ACPI Path": "\\_SB.PCI0.RP03"
+        },
+        "Eingebetteter, Microsoft ACPI-konformer Controller": {
+            "Bus Type": "ACPI",
+            "Device": "PNP0C09",
+            "ACPI Path": "\\_SB.PCI0.LPCB.EC__"
+        },
+        "Volume-Manager": {
+            "Bus Type": "ROOT",
+            "Device": "VOLMGR"
+        },
+        "Systemzeitgeber": {
+            "Bus Type": "ACPI",
+            "Device": "PNP0100",
+            "ACPI Path": "\\_SB.PCI0.LPCB.TIMR"
+        },
+        "Microsoft Basic Display Driver": {
+            "Bus Type": "ROOT",
+            "Device": "BASICDISPLAY"
+        },
+        "ACPI-Energiezustandknopf": {
+            "Bus Type": "ACPI",
+            "Device": "PNP0C0E",
+            "ACPI Path": "\\_SB.SLPB"
+        },
+        "Hauptplatinenressourcen_#3": {
+            "Bus Type": "ACPI",
+            "Device": "PNP0C02",
+            "ACPI Path": "\\_SB.PCI0.LPCB.LDR2"
+        },
+        "Microsoft Hyper-V-Virtualisierungsinfrastrukturtreiber": {
+            "Bus Type": "ROOT",
+            "Device": "VID"
+        },
+        "Hochpr\u00e4zisionsereigniszeitgeber": {
+            "Bus Type": "ACPI",
+            "Device": "PNP0103",
+            "ACPI Path": "\\_SB.PCI0.LPCB.HPET"
+        },
+        "Intel(R) 100 Series/C230 Series Chipset Family PMC - A121": {
+            "Bus Type": "PCI",
+            "Device ID": "8086-A121",
+            "Subsystem ID": "193710CF",
+            "PCI Path": "PciRoot(0x0)/Pci(0x1f,0x2)",
+            "ACPI Path": "\\_SB.PCI0.PPMC"
+        },
+        "Busenumerator f\u00fcr Verbundger\u00e4te": {
+            "Bus Type": "ROOT",
+            "Device": "COMPOSITEBUS"
+        },
+        "Microsoft virtueller Datentr\u00e4gerenumerator": {
+            "Bus Type": "ROOT",
+            "Device": "VDRVROOT"
+        },
+        "Fujitsu Wireless Radio Switch Driver": {
+            "Bus Type": "{B9413967-19D1-4D29-A163-31B951A5E08D}",
+            "Device": "FJWRDSWD"
+        },
+        "Intel(R) 100 Series/C230 Series Chipset Family PCI Express Root Port #5 - A114": {
+            "Bus Type": "PCI",
+            "Device ID": "8086-A114",
+            "Subsystem ID": "193710CF",
+            "PCI Path": "PciRoot(0x0)/Pci(0x1c,0x4)",
+            "ACPI Path": "\\_SB.PCI0.RP05"
+        },
+        "ACPI-Deckel": {
+            "Bus Type": "ACPI",
+            "Device": "PNP0C0D",
+            "ACPI Path": "\\_SB.LID_"
+        },
+        "Hauptplatinenressourcen_#4": {
+            "Bus Type": "ACPI",
+            "Device": "PNP0C02",
+            "ACPI Path": "\\_SB.PCI0.PRRE"
+        },
+        "UMBus-Stamm-Busenumerator": {
+            "Bus Type": "ROOT",
+            "Device": "UMBUS"
+        },
+        "Intel(R) 100 Series/C230 Series Chipset Family PCI Express Root Port #2 - A111": {
+            "Bus Type": "PCI",
+            "Device ID": "8086-A111",
+            "Subsystem ID": "193710CF",
+            "PCI Path": "PciRoot(0x0)/Pci(0x1c,0x1)",
+            "ACPI Path": "\\_SB.PCI0.RP02"
+        },
+        "CAD (Charging Arbitration Driver)": {
+            "Bus Type": "ROOT",
+            "Device": "CAD"
+        },
+        "Stammkomplex f\u00fcr PCI-Express": {
+            "Bus Type": "ACPI",
+            "Device": "PNP0A08",
+            "ACPI Path": "\\_SB.PCI0"
+        },
+        "System CMOS/Echtzeituhr": {
+            "Bus Type": "ACPI",
+            "Device": "PNP0B00",
+            "ACPI Path": "\\_SB.PCI0.LPCB.RTC_"
+        },
+        "Intel(R) Xeon(R) E3 - 1200/1500 v5/6th Gen Intel(R) Core(TM) Host Bridge/DRAM Registers - 1910": {
+            "Bus Type": "PCI",
+            "Device ID": "8086-1910",
+            "Subsystem ID": "193710CF",
+            "PCI Path": "PciRoot(0x0)/Pci(0x0,0x0)"
+        },
+        "Intel(R) 100 Series/C230 Series Chipset Family SMBus - A123": {
+            "Bus Type": "PCI",
+            "Device ID": "8086-A123",
+            "Subsystem ID": "193710CF",
+            "PCI Path": "PciRoot(0x0)/Pci(0x1f,0x4)",
+            "ACPI Path": "\\_SB.PCI0.SBUS"
+        },
+        "Fujitsu FUJ0420 Device": {
+            "Bus Type": "ACPI",
+            "Device": "FUJ0420",
+            "ACPI Path": "\\_SB.FJGI"
+        },
+        "Fujitsu BIOS Driver": {
+            "Bus Type": "{B9413967-19D1-4D29-A163-31B951A5E08D}",
+            "Device": "FBIOSDRV2"
+        },
+        "Programmierbarer Interruptcontroller": {
+            "Bus Type": "ACPI",
+            "Device": "PNP0000",
+            "ACPI Path": "\\_SB.PCI0.LPCB.IPIC"
+        },
+        "ACPI-Einschaltknopf": {
+            "Bus Type": "ACPI",
+            "Device": "PNP0C0C",
+            "ACPI Path": "\\_SB.PWRB"
+        },
+        "Microsoft ACPI-konformes System": {
+            "Bus Type": "ACPI_HAL",
+            "Device": "PNP0C08"
+        },
+        "High Definition Audio-Controller": {
+            "Bus Type": "PCI",
+            "Device ID": "8086-A170",
+            "Subsystem ID": "192F10CF",
+            "PCI Path": "PciRoot(0x0)/Pci(0x1f,0x3)",
+            "ACPI Path": "\\_SB.PCI0.HDAS"
+        },
+        "Microsoft Basic Render Driver": {
+            "Bus Type": "ROOT",
+            "Device": "BASICRENDER"
+        },
+        "Microsoft UEFI-konformes System": {
+            "Bus Type": "ACPI_HAL",
+            "Device": "UEFI"
+        },
+        "Hauptplatinenressourcen_#5": {
+            "Bus Type": "ACPI",
+            "Device": "INT3F0D",
+            "ACPI Path": "\\_SB.PCI0.LPCB.CWDT"
+        },
+        "Microsoft Windows-Verwaltungsschnittstelle f\u00fcr ACPI": {
+            "Bus Type": "ACPI",
+            "Device": "PNP0C14",
+            "ACPI Path": "\\_SB.PCI0.WMI1"
+        },
+        "Intel(R) Xeon(R) E3 - 1200/1500 v5/6th Gen Intel(R) Core(TM) PCIe Controller (x16) - 1901": {
+            "Bus Type": "PCI",
+            "Device ID": "8086-1901",
+            "Subsystem ID": "193710CF",
+            "PCI Path": "PciRoot(0x0)/Pci(0x1,0x0)",
+            "ACPI Path": "\\_SB.PCI0.PEG0"
+        },
+        "Intel(R) Management Engine Interface #1": {
+            "Bus Type": "PCI",
+            "Device ID": "8086-A13A",
+            "Subsystem ID": "193710CF",
+            "PCI Path": "PciRoot(0x0)/Pci(0x16,0x0)",
+            "ACPI Path": "\\_SB.PCI0.HECI"
+        },
+        "Fujitsu FUJ02E3 Device Driver": {
+            "Bus Type": "ACPI",
+            "Device": "FUJ02E3",
+            "ACPI Path": "\\_SB.FEXT"
+        },
+        "Enumerator f\u00fcr virtuelle NDIS-Netzwerkadapter": {
+            "Bus Type": "ROOT",
+            "Device": "NDISVIRTUALBUS"
+        },
+        "Intel(R) 100 Series/C230 Series Chipset Family PCI Express Root Port #1 - A110": {
+            "Bus Type": "PCI",
+            "Device ID": "8086-A110",
+            "Subsystem ID": "193710CF",
+            "PCI Path": "PciRoot(0x0)/Pci(0x1c,0x0)",
+            "ACPI Path": "\\_SB.PCI0.RP01"
+        },
+        "Numerischer Coprozessor": {
+            "Bus Type": "ACPI",
+            "Device": "PNP0C04",
+            "ACPI Path": "\\_SB.PCI0.LPCB.MATH"
+        },
+        "Microsoft-Systemverwaltungs-BIOS-Treiber": {
+            "Bus Type": "ROOT",
+            "Device": "MSSMBIOS"
+        },
+        "Microsoft Windows-Verwaltungsschnittstelle f\u00fcr ACPI_#1": {
+            "Bus Type": "ACPI",
+            "Device": "PNP0C14",
+            "ACPI Path": "\\_SB.WMTF"
+        },
+        "PnP-Softwareger\u00e4te-Enumerator": {
+            "Bus Type": "ROOT",
+            "Device": "SYSTEM"
+        },
+        "Redirector-Bus f\u00fcr Remotedesktop-Ger\u00e4t": {
+            "Bus Type": "ROOT",
+            "Device": "RDPBUS"
+        },
+        "Systemlautsprecher": {
+            "Bus Type": "ACPI",
+            "Device": "PNP0800",
+            "ACPI Path": "\\_SB.PCI0.LPCB.SPKR"
+        },
+        "Legacyger\u00e4t": {
+            "Bus Type": "ACPI",
+            "Device": "INT0800",
+            "ACPI Path": "\\_SB.PCI0.LPCB.FWHD"
+        }
+    }
+}
