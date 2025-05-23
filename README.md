@@ -20,7 +20,7 @@ Component | Description
 **Networking** | <ul><li>**Wi-Fi**: Intel Wireless-AC 8260 (Dual Band) <li>**LAN**: Intel I219-LM (1 Gbps) <li> SIM Card Slot
 **Storage**  | Samsung CM871a SSD (512 GB)
 **RAM** | 16 GB DDR4 SK Hynix (2133 Mhz)
-**SD Card Reader** | Realtek PCIE CardReader
+**SD Card Reader** | Realtek RTS524A PCIE Card Reader
 
 …
 
