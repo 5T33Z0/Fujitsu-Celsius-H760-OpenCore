@@ -5,7 +5,9 @@
 # Fujitsu Celsius H760 OpenCore
 
 ## About
-OpenCore EFI folder for running macOS Sonoma or newer on the Fujitsu H760 Workstation Laptop. This is a 3.000+ $ Laptop I saved from ending as e-Waste. As far as I can tell this is the first and only Hackintosh EFI folder for this system which is not really surprising giving the original price point of this machine. The upload will be located under "Releases" once I am done with configuring, testing and documentation!
+OpenCore EFI folder for running macOS Sonoma or newer on the Fujitsu H760 Workstation Laptop. This is a 3.000+ $ Laptop I saved from ending as e-Waste. As far as I can tell, this is the first and only Hackintosh EFI folder for this Celsius Model which is not really surprising given the original price tag of this machine. 
+
+The initial EFI was created with OpCore Simplify and then tweaked and modified to ensure maximum compatibility.
 
 ## Specs
 
@@ -22,25 +24,23 @@ Component | Description
 **RAM** | 16 GB DDR4 SK Hynix (2133 Mhz)
 **SD Card Reader** | Realtek RTS524A PCIE Card Reader
 
-…
-
 ## What's working
 
-- [x] iGPU (incuding. Brightness Controls)
+- [X] Video (iGPU)
 - [x] Audio (including Volume Controls)
-- [x] LAN
-- [x] WiFi/BT (requires patching with OCLP in Post-Install)
+- [x] External Display. (Only works, if the dGPU is *not* disabled – although it is driven by the iGPU…)
 - [x] Touchpad (ELAN)
+- [x] Wi-Fi and Bluetooth (Root Patches required)
+- [x] Ethernet
 - [x] Battery Status Indicator
-- [X] SD Card Reader
+- [X] SD Card Reader (no kext required)
+- [x] Sleep
 
-### Todo
-- [ ] Modifying Framebufffer Patch for attaching external Displays
-- [ ] Keyboard Shortcuts Mappings
+## Not working/Todo…
+- [ ] Keyboard Shortcut Mappings (currently, only Volume buttons work)
 - [ ] Waking Screen without additional Keyboard inputs
-- [ ] USB Port Mapping
-
-…
+- [ ] Brightness Controls. These only work if the dGPU is disabled. But then the external display doesn't work…
+- [ ] dGPU (NVIDIA Quatro M200M) – I doubt that this will ever work. Maybe, if I could trigger Webdriver Patches in OCLP…
 
 *to be continued…*
 
