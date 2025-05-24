@@ -9,18 +9,81 @@ The initial EFI was created with OpCore Simplify and then tweaked and modified t
 
 ## Specs
 
-Component | Description
-----------|------------
-**Model**     | [FUJITSU CELSIUS H760](https://www.fujitsu.com/hk/products/computing/pc/workstations/celsius-h760/)
-**Released**  | 2016
-**Chipset**   | QM170
-**BIOS**      | 1.35 (2023-01-23)
-**CPU**       | [Intel Core i7-6820HQ](https://www.intel.com/content/www/us/en/products/sku/88970/intel-core-i76820hq-processor-8m-cache-up-to-3-60-ghz/specifications.html) (Skylake)
-**Graphics**: | <ul><li>**iGP**: Intel HD Graphics 530 (spoofed as Kabylake) <li> **GPU**: NVIDIA Quadro M2000M (not working in macOS)
-**Networking** | <ul><li>**Wi-Fi**: Intel Wireless-AC 8260 (Dual Band) <li>**LAN**: Intel I219-LM (1 Gbps) <li> SIM Card Slot
-**Storage**  | Samsung CM871a SSD (512 GB)
-**RAM** | 16 GB DDR4 SK Hynix (2133 Mhz)
-**SD Card Reader** | Realtek RTS524A PCIE Card Reader
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-c3ow"><span style="font-weight:700;font-style:normal;text-decoration:none">Component</span></th>
+    <th class="tg-0pky"><span style="font-weight:bold">Description</span></th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-7btt">Model</td>
+    <td class="tg-0pky"><a href="https://www.fujitsu.com/hk/products/computing/pc/workstations/celsius-h760/" target="_blank" rel="noopener noreferrer">Fujitsu Celsius H760</a> (Workstation Laptop)</td>
+  </tr>
+  <tr>
+    <td class="tg-7btt">Year</td>
+    <td class="tg-0pky">2016</td>
+  </tr>
+  <tr>
+    <td class="tg-7btt"><span style="font-style:normal;text-decoration:none">Chipset</span></td>
+    <td class="tg-0pky">QM170</td>
+  </tr>
+  <tr>
+    <td class="tg-7btt"><span style="font-style:normal;text-decoration:none">BIOS</span></td>
+    <td class="tg-0pky">1.35 (2023-01-23)</td>
+  </tr>
+  <tr>
+    <td class="tg-7btt">CPU</td>
+    <td class="tg-0pky"><a href="https://www.intel.com/content/www/us/en/products/sku/88970/intel-core-i76820hq-processor-8m-cache-up-to-3-60-ghz/specifications.html" target="_blank" rel="noopener noreferrer">Intel Core i7-6820HQ</a> (Skylake)</td>
+  </tr>
+  <tr>
+    <td class="tg-uzvj" rowspan="2"><span style="font-style:normal;text-decoration:none">Graphics</span></td>
+    <td class="tg-0pky"><span style="font-weight:bold">iGU</span>: Intel HD 530 (spoofed as Kaby Lake)</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"><span style="font-weight:bold">GPU</span>: NVIDIA Quadro M2000M (not working in macOS)</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"><span style="font-weight:bold">Audio</span></td>
+    <td class="tg-0lax">Realtek ALC25 (ALC-Layout: 3)</td>
+  </tr>
+  <tr>
+    <td class="tg-uzvj" rowspan="3"><span style="font-style:normal;text-decoration:none">Networking</span></td>
+    <td class="tg-0pky"><span style="font-weight:bold">Wi-Fi</span>: Intel Wireless-AC 8260 (Dual Band)</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"><span style="font-weight:bold">LAN</span>: Intel I219-LM (1 Gbps)</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"><span style="font-weight:bold">WWAN</span>: SIM Card Slot</td>
+  </tr>
+  <tr>
+    <td class="tg-7btt">Storage</td>
+    <td class="tg-0pky">Samsung CM871a SSD (512 GB)</td>
+  </tr>
+  <tr>
+    <td class="tg-7btt"><span style="font-style:normal;text-decoration:none">RAM</span></td>
+    <td class="tg-0pky">16 GB DDR4 SK Hynix (2133 Mhz)</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"><span style="font-weight:bold">SD Card Reader</span></td>
+    <td class="tg-0pky">Realtek RTS524A PCIE</td>
+  </tr>
+</tbody></table>
+
+**More Details**: [FUJITSU Workstation CELSIUS H760 Data Sheet](https://objects.icecat.biz/objects/mmo_33216273_1477032094_9991_3759.pdf)
 
 ## What's working
 
