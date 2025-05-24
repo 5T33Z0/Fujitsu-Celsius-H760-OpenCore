@@ -9,19 +9,6 @@ The initial EFI was created with OpCore Simplify and then tweaked and modified t
 
 ## Specs
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-baqh{text-align:center;vertical-align:top}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
-.tg .tg-0lax{text-align:left;vertical-align:top}
-</style>
 <table class="tg"><thead>
   <tr>
     <th class="tg-c3ow"><span style="font-weight:700;font-style:normal;text-decoration:none">Component</span></th>
@@ -50,7 +37,7 @@ The initial EFI was created with OpCore Simplify and then tweaked and modified t
   </tr>
   <tr>
     <td class="tg-uzvj" rowspan="2"><span style="font-style:normal;text-decoration:none">Graphics</span></td>
-    <td class="tg-0pky"><span style="font-weight:bold">iGU</span>: Intel HD 530 (spoofed as Kaby Lake)</td>
+    <td class="tg-0pky"><span style="font-weight:bold">iGPU</span>: Intel HD 530 (spoofed as Kaby Lake)</td>
   </tr>
   <tr>
     <td class="tg-0pky"><span style="font-weight:bold">GPU</span>: NVIDIA Quadro M2000M (not working in macOS)</td>
