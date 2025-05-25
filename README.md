@@ -39,6 +39,23 @@ OpenCore EFI folder for running macOS Sonoma or newer on the Fujitsu H760 Workst
 - [ ] Testing alternative framebuffer patches to minimize conflicts with the dGPU, like: fixing Sleep, Wake Screen Issues and Brightness Controls – these only work if the dGPU is disabled. But then the external display doesn't work.
 - [ ] ~~dGPU (NVIDIA Quatro M200M) – I doubt that this will ever work. Maybe, if I could trigger Webdriver Patches in OCLP…~~
 
+## BIOS Settings
+
+Change the following Options to use macOS:
+
+- **Advanced**
+	- **Boot configuration**
+		- Fast Boot: Disabled
+		- CSM: Disabled
+	- **Video Features**
+		- NVIDIA Optimus Technology: Enabled
+	- **USB Features**
+		- Legacy USB Support: Enabled
+		- XHCI Controller Setting: Enabled
+- **Security**
+	- **Secure Boot Configuration**
+		- Secure Boot Option: Disabled 	    
+
 ## Observations
 
 ### Intel HD 530 iGPU Configuration
