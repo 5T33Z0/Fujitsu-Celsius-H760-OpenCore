@@ -3,11 +3,7 @@
 # Fujitsu Celsius H760 OpenCore
 
 ## About
-OpenCore EFI folder for running macOS Sonoma or newer on the Fujitsu H760 Workstation Laptop. This is a 3.000+ $ Laptop I saved from ending as e-Waste. As far as I can tell, this is the first and only Hackintosh EFI folder for this Celsius Model which is not really surprising given the original price tag of this machine. 
-
-The initial EFI was created with OpCore Simplify and then tweaked and modified to ensure maximum compatibility.
-
-
+OpenCore EFI folder for running macOS Sonoma or newer on the Fujitsu H760 Workstation Laptop. This is a 3.000+ $ Laptop I saved from ending as e-Waste. As far as I can tell, this is the first and only Hackintosh EFI folder for this Celsius Model which is not really surprising given the original price tag of this machine. The initial EFI was created with OpCore Simplify and then tweaked and modified to improve compatibility.
 
 ## Specs
 
