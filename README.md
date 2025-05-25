@@ -40,8 +40,7 @@ The initial EFI was created with OpCore Simplify and then tweaked and modified t
 
 ## Not working/Todo…
 - [ ] Keyboard Shortcut Mappings (currently, only Volume buttons work)
-- [ ] Waking Screen without additional Keyboard inputs
-- [ ] Brightness Controls. These only work if the dGPU is disabled. But then the external display doesn't work…
+- [ ] Testing alternative framebuffer patches to minimize conflicts with the dGPU, like: fixing Sleep, Wake Screen Issues and Brightness Controls – these only work if the dGPU is disabled. But then the external display doesn't work…
 ~~- [ ] dGPU (NVIDIA Quatro M200M) – I doubt that this will ever work. Maybe, if I could trigger Webdriver Patches in OCLP…~~
 
 ## Observations
@@ -66,7 +65,3 @@ The Celsius H760 uses Nvidia Optimus, where the external display ports (e.g., Di
   - **Brightness Shortcut Keys**: Brightness adjustment keys do not work currently.
   - **Sleep Mode**: The system fails to enter sleep properly. The screen turns black, but the backlight remains on, and the display does not wake, requiring a hard restart.
   - **Possible Cause**: The interaction between the spoofed iGPU configuration and the dGPU’s role in display routing may conflict with macOS’s power management and display control.
-- **Recommendation**: Further investigation is needed, potentially involving:
-  - Custom DSDT/SSDT patches to fix brightness control (e.g., injecting PNLF for brightness).
-  - Adjusting power management settings (e.g., hibernatemode=0 via sudo nvram hibernatemode=0 or OpenCore PM properties).
-  - Testing alternative framebuffer patches to minimize conflicts with the dGPU.
