@@ -29,6 +29,7 @@ OpenCore EFI folder for running macOS Sonoma or newer on the Fujitsu H760 Workst
 - [x] External Display (only works if Nvidia Optimus is enable I guess the the DisplayPort is hard-wired through the dGPU.)
 - [x] Audio (including Volume Controls)
 - [x] Touchpad (ELAN via PS/2)
+- [x] Integrated Camera
 - [x] Ethernet
 - [x] Wi-Fi and Bluetooth (root patching with OCLP required)
 - [x] Battery Status Indicator
