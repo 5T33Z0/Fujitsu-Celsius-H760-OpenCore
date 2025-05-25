@@ -46,11 +46,27 @@ The initial EFI was created with OpCore Simplify and then tweaked and modified t
 
 ## Observations
 
-### Intel HD530, OCLP and iGPU spoofing
-I've tried to use a Skylake Framebuffer Patch and then apply root patches with OCLP to re-enable the Intel HD530 in macOS Sonoma. The patches were applied but graphics acceleration was not working afterwards. So, spoofinfg a Kaby Lake Framebuffer Patch is the way to go with this system 
+### Intel HD 530 iGPU Configuration
+I attempted to apply a Skylake framebuffer patch for the Intel HD 530 iGPU, followed by OpenCore Legacy Patcher (OCLP) root patches to enable graphics acceleration in macOS Sonoma.
 
-### NVIDIA Optimus
-I've noticed that OpenCore Legacy Patcher can apply root patches for the Nvidia Quadro M2000M GPU, if the NVIDIA Optimus GPU Option in BIOS is _disabled_. Don't do this! You won't be able to boot into macOS – not even in Safe Mode! Instead, leave the Optimus option _enabled_ so that the DisplayPort can be used by the Intel HD530 iGPU to drive an external display! 
+- **Result**: The patches were applied successfully, but graphics acceleration did not work.
+- **Solution**: Spoofing a Kaby Lake framebuffer (`ig-platform-id` for a Kaby Lake iGPU, e.g., `0x59120000`) resolved the issue and enabled proper graphics acceleration.
 
-### Related issues
-I think the combination of iGPU sppofing and the DisplayPort being physically routed through the Nvidia Quadro causes additional issues: Brightness Shortcut keys are not workingt. The system doesn't enter sleep properly, only the screen turns black while the backlight stays on and won't return to displaying a picture.
+### Nvidia Quadro M2000M and Optimus Configuration
+
+The Celsius H760 uses Nvidia Optimus, where the external display ports (e.g., DisplayPort) are physically routed through the Nvidia Quadro M2000M dGPU, even when the Intel HD 530 iGPU drives the display.
+
+- **Observation**: Applying OCLP root patches for the Quadro M2000M results in a critical issue: The root patches brick macOS, preventing the system from booting, even in Safe Mode.
+- **Solution**: Keep the Nvidia Optimus GPU option _enabled_ in the BIOS and avoid applying OCLP root patches for the dGPU. This allows the Intel HD 530 iGPU to drive the external display via the DisplayPort, routed through the Quadro M2000M.
+- **Recommendation**: Do not apply OCLP root patches for the Nvidia Quadro M2000M to maintain system bootability and external display functionality. Ensure Optimus remains enabled in the BIOS to support display routing.
+
+### Related issues: Brightness Control and Sleep Functionality
+
+- **Issues**: The combination of iGPU spoofing (Kaby Lake framebuffer) and the DisplayPort routing through the Nvidia Quadro M2000M causes additional issues:
+  - **Brightness Shortcut Keys**: Brightness adjustment keys do not work currently.
+  - **Sleep Mode**: The system fails to enter sleep properly. The screen turns black, but the backlight remains on, and the display does not wake, requiring a hard restart.
+  - **Possible Cause**: The interaction between the spoofed iGPU configuration and the dGPU’s role in display routing may conflict with macOS’s power management and display control.
+- **Recommendation**: Further investigation is needed, potentially involving:
+  - Custom DSDT/SSDT patches to fix brightness control (e.g., injecting PNLF for brightness).
+  - Adjusting power management settings (e.g., hibernatemode=0 via sudo nvram hibernatemode=0 or OpenCore PM properties).
+  - Testing alternative framebuffer patches to minimize conflicts with the dGPU.
