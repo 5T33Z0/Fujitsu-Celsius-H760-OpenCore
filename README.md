@@ -7,6 +7,8 @@ OpenCore EFI folder for running macOS Sonoma or newer on the Fujitsu H760 Workst
 
 The initial EFI was created with OpCore Simplify and then tweaked and modified to ensure maximum compatibility.
 
+
+
 ## Specs
 
 | **Component** | Description |
@@ -29,13 +31,12 @@ The initial EFI was created with OpCore Simplify and then tweaked and modified t
 
 - [X] Video (iGPU)
 - [x] Audio (including Volume Controls)
-- [x] External Display. (Only works, if the dGPU is *not* disabled – although it is driven by the iGPU…)
+- [x] External Display. (Only works, if the dGPU is *not* disabled. It seems that the DisplayPort is hard-wired through the dGPU.)
 - [x] Touchpad (ELAN)
 - [x] Wi-Fi and Bluetooth (Root Patches required)
 - [x] Ethernet
 - [x] Battery Status Indicator
 - [X] SD Card Reader
-- [x] Sleep
 
 ## Not working/Todo…
 - [ ] Keyboard Shortcut Mappings (currently, only Volume buttons work)
@@ -43,4 +44,13 @@ The initial EFI was created with OpCore Simplify and then tweaked and modified t
 - [ ] Brightness Controls. These only work if the dGPU is disabled. But then the external display doesn't work…
 - [ ] dGPU (NVIDIA Quatro M200M) – I doubt that this will ever work. Maybe, if I could trigger Webdriver Patches in OCLP…
 
-*to be continued…*
+## Observations
+
+### Intel HD530, OCLP and iGPU spoofing
+I've tried to use a Skylake Framebuffer Patch and then apply root patches with OCLP to re-enable the Intel HD530 in macOS Sonoma. The patches were applied but graphics acceleration was not working afterwards. So, spoofinfg a Kaby Lake Framebuffer Patch is the way to go with this system 
+
+### NVIDIA Optimus
+I've noticed that OpenCore Legacy Patcher can apply root patches for the Nvidia Quadro M2000M GPU, if the NVIDIA Optimus GPU Option in BIOS is _disabled_. Don't do this! You won't be able to boot into macOS – not even in Safe Mode! Instead, leave the Optimus option _enabled_ so that the DisplayPort can be used by the Intel HD530 iGPU to drive an external display! 
+
+### Related issues
+I think the combination of iGPU sppofing and the DisplayPort being physically routed through the Nvidia Quadro causes additional issues: Brightness Shortcut keys are not workingt. The system doesn't enter sleep properly, only the screen turns black while the backlight stays on and won't return to displaying a picture.
