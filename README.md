@@ -8,7 +8,7 @@ OpenCore EFI folder for running macOS Sonoma or newer on the Fujitsu H760 Workst
 ## Specs
 
 | **Component** | Description |
-|:-------------:|:-----------|
+|--------------:|:-----------|
 | **Model**     | [Fujitsu Celsius H760](https://www.fujitsu.com/hk/products/computing/pc/workstations/celsius-h760/) (Workstation Laptop) |
 | **Year**      | 2016 |
 | **Chipset**   | QM170 |
