@@ -9,66 +9,19 @@ The initial EFI was created with OpCore Simplify and then tweaked and modified t
 
 ## Specs
 
-<table class="tg"><thead>
-  <tr>
-    <th class="tg-c3ow"><span style="font-weight:700;font-style:normal;text-decoration:none">Component</span></th>
-    <th class="tg-0pky"><span style="font-weight:bold">Description</span></th>
-  </tr></thead>
-<tbody>
-  <tr>
-    <td class="tg-7btt">Model</td>
-    <td class="tg-0pky"><a href="https://www.fujitsu.com/hk/products/computing/pc/workstations/celsius-h760/" target="_blank" rel="noopener noreferrer">Fujitsu Celsius H760</a> (Workstation Laptop)</td>
-  </tr>
-  <tr>
-    <td class="tg-7btt">Year</td>
-    <td class="tg-0pky">2016</td>
-  </tr>
-  <tr>
-    <td class="tg-7btt"><span style="font-style:normal;text-decoration:none">Chipset</span></td>
-    <td class="tg-0pky">QM170</td>
-  </tr>
-  <tr>
-    <td class="tg-7btt"><span style="font-style:normal;text-decoration:none">BIOS</span></td>
-    <td class="tg-0pky">1.35 (2023-01-23)</td>
-  </tr>
-  <tr>
-    <td class="tg-7btt">CPU</td>
-    <td class="tg-0pky"><a href="https://www.intel.com/content/www/us/en/products/sku/88970/intel-core-i76820hq-processor-8m-cache-up-to-3-60-ghz/specifications.html" target="_blank" rel="noopener noreferrer">Intel Core i7-6820HQ</a> (Skylake)</td>
-  </tr>
-  <tr>
-    <td class="tg-uzvj" rowspan="2"><span style="font-style:normal;text-decoration:none">Graphics</span></td>
-    <td class="tg-0pky"><span style="font-weight:bold">iGPU</span>: Intel HD 530 (spoofed as Kaby Lake)</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky"><span style="font-weight:bold">GPU</span>: NVIDIA Quadro M2000M (not working in macOS)</td>
-  </tr>
-  <tr>
-    <td class="tg-baqh"><span style="font-weight:bold">Audio</span></td>
-    <td class="tg-0lax">Realtek ALC25 (ALC-Layout: 3)</td>
-  </tr>
-  <tr>
-    <td class="tg-uzvj" rowspan="3"><span style="font-style:normal;text-decoration:none">Networking</span></td>
-    <td class="tg-0pky"><span style="font-weight:bold">Wi-Fi</span>: Intel Wireless-AC 8260 (Dual Band)</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky"><span style="font-weight:bold">LAN</span>: Intel I219-LM (1 Gbps)</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky"><span style="font-weight:bold">WWAN</span>: SIM Card Slot</td>
-  </tr>
-  <tr>
-    <td class="tg-7btt">Storage</td>
-    <td class="tg-0pky">Samsung CM871a SSD (512 GB)</td>
-  </tr>
-  <tr>
-    <td class="tg-7btt"><span style="font-style:normal;text-decoration:none">RAM</span></td>
-    <td class="tg-0pky">16 GB DDR4 SK Hynix (2133 Mhz)</td>
-  </tr>
-  <tr>
-    <td class="tg-c3ow"><span style="font-weight:bold">SD Card Reader</span></td>
-    <td class="tg-0pky">Realtek RTS524A PCIE</td>
-  </tr>
-</tbody></table>
+| **Component** | Description |
+|:-------------:|:-----------|
+| **Model**     | [Fujitsu Celsius H760](https://www.fujitsu.com/hk/products/computing/pc/workstations/celsius-h760/) (Workstation Laptop) |
+| **Year**      | 2016 |
+| **Chipset**   | QM170 |
+| **BIOS**      | 1.35 (2023-01-23) |
+| **CPU**       | [Intel Core i7-6820HQ](https://www.intel.com/content/www/us/en/products/sku/88970/intel-core-i76820hq-processor-8m-cache-up-to-3-60-ghz/specifications.html) (Skylake) |
+| **Graphics**  | **iGPU**: Intel HD 530 (spoofed as Kaby Lake)<br>**GPU**: NVIDIA Quadro M2000M (not working in macOS) |
+| **Audio**     | Realtek ALC25 (ALC-Layout: 3) |
+| **Networking**| **Wi-Fi**: Intel Wireless-AC 8260 (Dual Band)<br>**LAN**: Intel I219-LM (1 Gbps)<br>**WWAN**: SIM Card Slot |
+| **Storage**   | Samsung CM871a SSD (512 GB) |
+| **RAM**       | 16 GB DDR4 SK Hynix (2133 MHz) |
+| **SD Card Reader** | Realtek RTS524A PCIE |
 
 **More Details**: [FUJITSU Workstation CELSIUS H760 Data Sheet](https://objects.icecat.biz/objects/mmo_33216273_1477032094_9991_3759.pdf)
 
@@ -81,7 +34,7 @@ The initial EFI was created with OpCore Simplify and then tweaked and modified t
 - [x] Wi-Fi and Bluetooth (Root Patches required)
 - [x] Ethernet
 - [x] Battery Status Indicator
-- [X] SD Card Reader (no kext required)
+- [X] SD Card Reader
 - [x] Sleep
 
 ## Not working/Todo…
@@ -91,17 +44,3 @@ The initial EFI was created with OpCore Simplify and then tweaked and modified t
 - [ ] dGPU (NVIDIA Quatro M200M) – I doubt that this will ever work. Maybe, if I could trigger Webdriver Patches in OCLP…
 
 *to be continued…*
-
-## 📜 License
-
-This repository is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)** license.
-
-**This means**:
-
-- ✅ You may use, share, and adapt this configuration for **personal and non-commercial use**
-- ❌ You **may not use it for commercial purposes**
-- 🔗 License text: [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
-
-If you use or modify this configuration, please include attribution:
-
-`Original: https://github.com/5T33Z0/Fujitsu_Celsius_H760_OpenCore`
