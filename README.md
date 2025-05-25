@@ -42,7 +42,7 @@ The initial EFI was created with OpCore Simplify and then tweaked and modified t
 - [ ] Keyboard Shortcut Mappings (currently, only Volume buttons work)
 - [ ] Waking Screen without additional Keyboard inputs
 - [ ] Brightness Controls. These only work if the dGPU is disabled. But then the external display doesn't work…
-- [ ] dGPU (NVIDIA Quatro M200M) – I doubt that this will ever work. Maybe, if I could trigger Webdriver Patches in OCLP…
+~~- [ ] dGPU (NVIDIA Quatro M200M) – I doubt that this will ever work. Maybe, if I could trigger Webdriver Patches in OCLP…~~
 
 ## Observations
 
