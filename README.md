@@ -40,8 +40,8 @@ The initial EFI was created with OpCore Simplify and then tweaked and modified t
 
 ## Not working/Todo…
 - [ ] Keyboard Shortcut Mappings (currently, only Volume buttons work)
-- [ ] Testing alternative framebuffer patches to minimize conflicts with the dGPU, like: fixing Sleep, Wake Screen Issues and Brightness Controls – these only work if the dGPU is disabled. But then the external display doesn't work…
-~~- [ ] dGPU (NVIDIA Quatro M200M) – I doubt that this will ever work. Maybe, if I could trigger Webdriver Patches in OCLP…~~
+- [ ] Testing alternative framebuffer patches to minimize conflicts with the dGPU, like: fixing Sleep, Wake Screen Issues and Brightness Controls – these only work if the dGPU is disabled. But then the external display doesn't work.
+- [ ] ~~dGPU (NVIDIA Quatro M200M) – I doubt that this will ever work. Maybe, if I could trigger Webdriver Patches in OCLP…~~
 
 ## Observations
 
