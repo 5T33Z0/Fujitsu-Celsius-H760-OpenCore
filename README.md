@@ -15,7 +15,7 @@ OpenCore EFI folder for running macOS Sonoma or newer on the Fujitsu H760 Workst
 | **BIOS**      | 1.35 (2023-01-23) |
 | **CPU**       | [Intel Core i7-6820HQ](https://www.intel.com/content/www/us/en/products/sku/88970/intel-core-i76820hq-processor-8m-cache-up-to-3-60-ghz/specifications.html) (Skylake) |
 | **Graphics**  | **iGPU**: Intel HD 530 (spoofed as Kaby Lake)<br>**GPU**: NVIDIA Quadro M2000M (not working in macOS) |
-| **Audio**     | Realtek ALC25 (ALC-Layout: 3) |
+| **Audio**     | Realtek ALC255 (ALC-Layout: 3) |
 | **Networking**| **Wi-Fi**: Intel Wireless-AC 8260 (Dual Band)<br>**LAN**: Intel I219-LM (1 Gbps)<br>**WWAN**: SIM Card Slot |
 | **Storage**   | Samsung CM871a SSD (512 GB) |
 | **RAM**       | 16 GB DDR4 SK Hynix (2133 MHz) |
@@ -25,19 +25,20 @@ OpenCore EFI folder for running macOS Sonoma or newer on the Fujitsu H760 Workst
 
 ## What's working
 
-- [X] Video (iGPU)
+- [X] Graphic Acceleration (iGPU). Only works if Nvidia Optimus is enabled in BIOS
+- [x] External Display (only works if Nvidia Optimus is enable I guess the the DisplayPort is hard-wired through the dGPU.)
 - [x] Audio (including Volume Controls)
-- [x] External Display. (Only works, if the dGPU is *not* disabled. It seems that the DisplayPort is hard-wired through the dGPU.)
-- [x] Touchpad (ELAN)
-- [x] Wi-Fi and Bluetooth (Root Patches required)
+- [x] Touchpad (ELAN via PS/2)
 - [x] Ethernet
+- [x] Wi-Fi and Bluetooth (root patching with OCLP required)
 - [x] Battery Status Indicator
 - [X] SD Card Reader
 
 ## Not working/Todo…
-- [ ] Keyboard Shortcut Mappings (currently, only Volume buttons work)
-- [ ] Testing alternative framebuffer patches to minimize conflicts with the dGPU, like: fixing Sleep, Wake Screen Issues and Brightness Controls – these only work if the dGPU is disabled. But then the external display doesn't work.
-- [ ] ~~dGPU (NVIDIA Quatro M200M) – I doubt that this will ever work. Maybe, if I could trigger Webdriver Patches in OCLP…~~
+- [ ] dGPU (NVIDIA Quatro M2000M): &rarr; see "Observations" 
+- [ ] Sleep: Black-Screen-on-Wake issue if dGPU is enabled
+- [ ] Keyboard Shortcut Mappings (currently, only Audio Volume shortcuts are working)
+- [ ] Brightness Controls only work if the dGPU is disabled. But then the external display doesn't work.
 
 ## BIOS Settings
 
@@ -62,7 +63,7 @@ Change the following Options to use macOS:
 I attempted to apply a Skylake framebuffer patch for the Intel HD 530 iGPU, followed by OpenCore Legacy Patcher (OCLP) root patches to enable graphics acceleration in macOS Sonoma.
 
 - **Result**: The patches were applied successfully, but graphics acceleration did not work.
-- **Solution**: Spoofing a Kaby Lake framebuffer (`ig-platform-id` for a Kaby Lake iGPU, e.g., `0x59120000`) resolved the issue and enabled proper graphics acceleration.
+- **Solution**: Spoofing a Kaby Lake framebuffer resolved the issue and enabled proper graphics acceleration.
 
 ### Nvidia Quadro M2000M and Optimus Configuration
 
