@@ -63,10 +63,10 @@ Change the following options to run macOS:
 ## Observations
 
 ### Intel HD 530 iGPU Configuration
-I attempted to apply a Skylake framebuffer patch for the Intel HD 530 iGPU, followed by OpenCore Legacy Patcher (OCLP) root patches to enable graphics acceleration in macOS Sonoma.
+I attempted to apply a Skylake framebuffer patch for the Intel HD 530 iGPU, followed by OpenCore Legacy Patcher (OCLP) 2.4.0 root patches to enable graphics acceleration in macOS Sonoma.
 
-- **Result**: The patches were applied successfully, but graphics acceleration did not work.
-- **Solution**: Spoofing a Kaby Lake framebuffer resolved the issue and enabled proper graphics acceleration.
+- **Result**: Root patches were applied successfully, but the Window Server would crashe immediately after logging in, kicking me back to the login-screen.
+- **Solution**: Reverting root patches and spoofing a Kaby Lake framebuffer instead, so proper graphics acceleration is working
 
 ### Nvidia Quadro M2000M and Optimus Configuration
 
