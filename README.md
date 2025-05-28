@@ -5,7 +5,7 @@
 ## About
 OpenCore EFI folder for running macOS Sonoma or newer on the Fujitsu H760 Workstation Laptop. This is a 3.000+ $ workstation laptop I saved from ending as E-Waste. As far as I can tell, this is the first and only OpenCore config for this Celsius Model which is not really surprising given the original price tag of this machine. 
 
-The initial EFI was created with OpCore Simplify and then tweaked and modified to improve compatibility. Installing macOS worked immediately. But getting the iGPU and acceleration to work was rather challenging. It took some time to figure out that output of the iGPU to the DisplayPort is hard-wirded through the Nvidia M2000M GPU which has to stay enabled in order to work. This affects brightness controls as well as sleep mode (check &rarr; [Observations](#observations) for details). Further research and tests are required.
+The initial EFI was created with OpCore Simplify and then tweaked and modified to improve compatibility. Installing macOS worked immediately. But getting the iGPU and acceleration to work was rather challenging. It took some time to figure out that output of the iGPU to the DisplayPort is hard-wired through the Nvidia M2000M GPU which has to stay enabled in order to work. This affects brightness controls as well as sleep mode (check &rarr; [Observations](#observations) for details). Further research and tests are required.
 
 ## Specs
 
@@ -28,7 +28,7 @@ The initial EFI was created with OpCore Simplify and then tweaked and modified t
 ## What's working
 
 - [X] Graphic Acceleration (iGPU). Only works if Nvidia Optimus is enabled in BIOS
-- [x] External Display (only works if Nvidia Optimus is enable I guess the the DisplayPort is hard-wired through the dGPU.)
+- [x] External Display via DisplayPort (it's hard-wired through the dGPU, so Nvidia Optimus has to be enabled)
 - [x] Audio (including Volume Controls)
 - [x] Touchpad (ELAN via PS/2)
 - [x] Integrated Camera
@@ -38,7 +38,7 @@ The initial EFI was created with OpCore Simplify and then tweaked and modified t
 - [X] SD Card Reader
 
 ## Not working/Todo…
-- [ ] dGPU (NVIDIA Quatro M2000M)
+- [ ] dGPU (NVIDIA Quadro M2000M)
 - [ ] Sleep: Black-Screen-on-Wake issue if dGPU is enabled
 - [ ] Keyboard Shortcut Mappings (currently, only Audio Volume shortcuts are working)
 - [ ] Brightness Controls only work if the dGPU is disabled. But then the external display doesn't work.
@@ -65,7 +65,7 @@ Change the following options to run macOS:
 ### Intel HD 530 iGPU Configuration
 I attempted to apply a Skylake framebuffer patch for the Intel HD 530 iGPU, followed by OpenCore Legacy Patcher (OCLP) 2.4.0 root patches to enable graphics acceleration in macOS Sonoma.
 
-- **Result**: Root patches were applied successfully, but the Window Server would crashe immediately after logging in, kicking me back to the login-screen.
+- **Result**: Root patches were applied successfully, but the Window Server would crash immediately after logging in, kicking me back to the login-screen.
 - **Solution**: Reverting root patches and spoofing a Kaby Lake framebuffer instead, so proper graphics acceleration is working
 
 ### Nvidia Quadro M2000M and Optimus Configuration
@@ -74,7 +74,7 @@ The Celsius H760 uses Nvidia Optimus, where the external display ports (e.g., Di
 
 - **Observation**: Applying OCLP root patches for the Quadro M2000M results in a critical issue: The root patches brick macOS, preventing the system from booting, even in Safe Mode.
 - **Solution**: Keep the Nvidia Optimus GPU option _enabled_ in the BIOS and avoid applying OCLP root patches for the dGPU. This allows the Intel HD 530 iGPU to drive the external display via the DisplayPort, routed through the Quadro M2000M.
-- **Recommendation**: Do not apply OCLP root patches for the Nvidia Quadro M2000M to maintain system bootability and external display functionality. Ensure Optimus remains enabled in the BIOS to support display routing.
+- **Recommendation**: Do not apply OCLP root patches for the Nvidia Quadro M2000M. Otherwise the system becomes unbootable – even in Safe Mode. Ensure Optimus remains enabled in the BIOS to support external displays.
 
 ### Related issues: Brightness Control and Sleep Functionality
 
