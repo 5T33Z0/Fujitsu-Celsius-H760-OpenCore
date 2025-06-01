@@ -2,6 +2,25 @@
 
 # Fujitsu Celsius H760 OpenCore
 
+---
+
+**TABLE of CONTENTS**
+
+- [About](#about)
+- [Specs](#specs)
+- [What's working](#whats-working)
+- [Not working/Todo…](#not-workingtodo)
+- [BIOS Settings](#bios-settings)
+- [Deployment](#deployment)
+- [Post-Install](#post-install)
+	- [Fixing Sleep issues](#fixing-sleep-issues)
+- [iGPU/GPU-related issues](#igpugpu-related-issues)
+	- [Intel HD 530 iGPU Configuration](#intel-hd-530-igpu-configuration)
+	- [Nvidia Quadro M2000M and Optimus Configuration](#nvidia-quadro-m2000m-and-optimus-configuration)
+	- [Related issues: Brightness Control and Sleep Functionality](#related-issues-brightness-control-and-sleep-functionality)
+
+---
+
 ## About
 OpenCore EFI folder for running macOS Sonoma or newer on the Fujitsu H760 Workstation Laptop. This is a 3.000+ $ workstation laptop I saved from ending as E-Waste. As far as I can tell, this is the first and only OpenCore config for this Celsius Model which is not really surprising given the original price tag of this machine. 
 
@@ -60,7 +79,44 @@ Change the following options to run macOS:
 	- **Secure Boot Configuration**
 		- Secure Boot Option: Disabled 	    
 
-## Observations
+## Deployment
+- Download the latest OC EFI folder from the [Releases](https://github.com/5T33Z0/Fujitsu-Celsius-H760-OpenCore/releases) section
+- Extract it
+- Download [**OCAT**](https://github.com/ic005k/OCAuxiliaryTools) amd run it
+- In the menu bar select "Edit" > "OpenCore DEV" to change the OpenCore version
+- Ignore the warning about missing files
+- Next, click on "Upgrade OpenCore and Kexts"
+- In the "Sync" Window, click on "Get OpenCore" to download the latest OC build
+- Close the sync window
+- Back in the Main window click on the button to mount the EFI partiton
+- Click on "Mount and open config.plist"
+- Select the PlatformInfo/Generic Section and click on "Generate" next to the "SystemProductName" dropdown menu
+- Copy EFI to a FAT32 formtted USB flash drive
+- Boot macOS from the USB flash drive
+- If the folder works then copy it to your internal disk
+
+## Post-Install
+
+### Fixing Sleep issues
+
+In order to prevent the most common issues with sleep, we will set it to `hibernatemode 0` (Suspend to RAM), write protect the slee pimage using Terminal:
+
+```bash
+sudo pmset -a hibernatemode 0
+sudo rm /var/vm/sleepimage
+sudo touch /var/vm/sleepimage
+sudo chflags uchg /var/vm/sleepimage
+```
+
+Next, we disable `displaysleep` and `powernap` to workaround the black-screen-on-wake issue. And since this Notebook does not have a motion sensor, we also disable `proximitywake`: 
+
+```bash 
+sudo pmset displaysleep 0
+sudo pmset powernap 0
+sudo pmset proximitywake 0
+```
+
+## iGPU/GPU-related issues
 
 ### Intel HD 530 iGPU Configuration
 I attempted to apply a Skylake framebuffer patch for the Intel HD 530 iGPU, followed by OpenCore Legacy Patcher (OCLP) 2.4.0 root patches to enable graphics acceleration in macOS Sonoma.
